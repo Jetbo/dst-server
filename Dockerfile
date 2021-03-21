@@ -21,6 +21,8 @@ RUN ./dstserver auto-install
 EXPOSE 10999/udp
 # Steam ports
 EXPOSE 27015/tcp 27015/udp 27016/tcp 27016/udp 8766/tcp 8766/udp
+# Steam P2P ports
+EXPOSE 3478/udp 4379/udp 4380/udp
 # Health check
 EXPOSE 8080
 
