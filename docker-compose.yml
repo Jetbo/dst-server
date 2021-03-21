@@ -1,0 +1,40 @@
+version: "3"
+
+services:
+  dstserver:
+    container_name: dstserver
+    build: .
+    ports:
+      - 10999:10999/udp
+      - 27015:27015/udp
+      - 27015:27015/tcp
+      - 27016:27016/udp
+      - 27016:27016/tcp
+      - 8766:8766/udp
+      - 8766:8766/tcp
+      - 8080:8080 # make sure this matches your HEALTH_CHECK_PORT ENV
+    volumes:
+      - gsm-log-volume:/home/linuxgsm/gsm/log
+      - steam-log-volume:/home/linuxgsm/.local/share/Steam/logs
+      - dst-server-volume:/home/linuxgsm/.klei/DoNotStarveTogether
+    # Customize these!
+    environment:
+      - SERVER_PASSWORD=test123
+      - SERVER_NAME=Test Server
+      - SERVER_DESCRIPTION=Test Server
+      - SERVER_INTENTION=social
+      - CLUSTER_NAME=Test-Server
+      - CLUSTER_TOKEN=123 # change this to your real toke or the server won't start
+      - GAME_MODE=endless
+      - MAX_PLAYERS=4
+      - ENABLE_PVP=false
+      - ENABLE_CONSOLE=true
+      - MAX_SNAPSHOTS=4
+      - HEALTH_CHECK_PORT=8080
+      - ENABLE_CLEAN_SHUTDOWN=1
+      - UPDATE_ON_RUN=0
+
+volumes:
+  gsm-log-volume:
+  steam-log-volume:
+  dst-server-volume:
