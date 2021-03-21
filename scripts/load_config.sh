@@ -39,7 +39,7 @@ echo "Updates on run is set to: $UPDATE_ON_RUN";
 # Set LinuxGSM config values with sed
 sed -i "s/cluster=.*/cluster=\"$CLUSTER_NAME\"/" /home/linuxgsm/gsm/dstserver.cfg;
 # Set cluster_token.txt value
-echo '[AUTHTOKEN]' > /home/linuxgsm/gsm/cluster_token.txt
+echo $CLUSTER_TOKEN > /home/linuxgsm/gsm/cluster_token.txt
 # Set cluster.ini config values with sed
 sed -i "s/cluster_name =.*/cluster_name = $SERVER_NAME/" /home/linuxgsm/gsm/cluster.ini
 sed -i "s/cluster_description =.*/cluster_description = $SERVER_DESCRIPTION/" /home/linuxgsm/gsm/cluster.ini
