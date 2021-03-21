@@ -55,12 +55,20 @@ sed -i "s/max_snapshots =.*/max_snapshots = $MAX_SNAPSHOTS/" /home/linuxgsm/gsm/
 mkdir -p /home/linuxgsm/.klei/DoNotStarveTogether/$CLUSTER_NAME/Master
 
 # Move token and ini files to world (cluster) folder
-cp /home/linuxgsm/gsm/cluster_token.txt /home/linuxgsm/.klei/DoNotStarveTogether/$CLUSTER_NAME/cluster_token.txt
-cp /home/linuxgsm/gsm/cluster.ini /home/linuxgsm/.klei/DoNotStarveTogether/$CLUSTER_NAME/cluster.ini
-cp /home/linuxgsm/gsm/server.ini /home/linuxgsm/.klei/DoNotStarveTogether/$CLUSTER_NAME/Master/server.ini
+cp /home/linuxgsm/gsm/cluster_token.txt /home/linuxgsm/.klei/DoNotStarveTogether/$CLUSTER_NAME/cluster_token.txt;
+cp /home/linuxgsm/gsm/cluster.ini /home/linuxgsm/.klei/DoNotStarveTogether/$CLUSTER_NAME/cluster.ini;
+cp /home/linuxgsm/gsm/server.ini /home/linuxgsm/.klei/DoNotStarveTogether/$CLUSTER_NAME/Master/server.ini;
 
 # Replace LinuxGSM config
 cp /home/linuxgsm/gsm/dstserver.cfg /home/linuxgsm/gsm/lgsm/config-lgsm/dstserver/dstserver.cfg;
+
+# Enable mods
+if [ "$ENABLE_MODS" = "1" ]
+then
+  echo "Enabling Mods...";
+  cp /home/linuxgsm/gsm/dedicated_server_mods_setup.lua /home/linuxgsm/serverfiles/mods/dedicated_server_mods_setup.lua
+  cp /home/linuxgsm/gsm/modsettings.lua /home/linuxgsm/serverfiles/mods/modsettings.lua
+fi
 
 # Run Updates
 if [ "$UPDATE_ON_RUN" = "1" ]

@@ -33,6 +33,7 @@ services:
       - HEALTH_CHECK_PORT=8080
       - ENABLE_CLEAN_SHUTDOWN=1
       - UPDATE_ON_RUN=0
+      - ENABLE_MODS=0
 
 volumes:
   gsm-log-volume:

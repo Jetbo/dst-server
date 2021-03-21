@@ -32,6 +32,8 @@ COPY --chown=linuxgsm:linuxgsm scripts/load_config.sh /home/linuxgsm/gsm/load_co
 COPY --chown=linuxgsm:linuxgsm scripts/cluster.ini /home/linuxgsm/gsm/cluster.ini
 COPY --chown=linuxgsm:linuxgsm scripts/server.ini /home/linuxgsm/gsm/server.ini
 COPY --chown=linuxgsm:linuxgsm scripts/cluster_token.txt /home/linuxgsm/gsm/cluster_token.txt
+COPY --chown=linuxgsm:linuxgsm scripts/dedicated_server_mods_setup.lua /home/linuxgsm/gsm/dedicated_server_mods_setup.lua
+COPY --chown=linuxgsm:linuxgsm scripts/modsettings.lua /home/linuxgsm/gsm/modsettings.lua
 RUN chmod +x /home/linuxgsm/gsm/load_config.sh
 
 # Copy simple server health checks

@@ -1,0 +1,6 @@
+-- This file is where you list which mods you want installed
+-- The format is...
+-- ServerModSetup("{STEAM WORKSHOP ID}")
+--
+-- Example:
+-- ServerModSetup("378160973")

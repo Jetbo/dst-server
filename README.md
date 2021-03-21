@@ -27,6 +27,23 @@ If you want to make sure the world saves before the container exits, enable `ENA
 
 If you want to the server to update itself (like on a nightly reboot cron) enable `UPDATE_ON_RUN` in the ENV. This will run both the LinuxGSM and Don't Starve Together server update commands before the server boots up. Keep in mind the server will start faster with this disabled. If disabled, remember to update the server manually or re-build the container periodically to install new versions.
 
+## Mods
+
+Don't Starve Together supports mods. You need to fill out the Lua mod files yourself.
+
+```
+scripts/dedicated_server_mods_setup.lua
+scripts/modsettings.lua
+```
+
+After you configure those files, you can enable mods by setting:
+
+```
+ENABLE_MODS # Enables mods (0, 1)
+```
+
+This ENV is optional. Not setting `ENABLE_MODS` will cause the server to assume mods are disabled.
+
 ## Useful file locations
 
 ```
