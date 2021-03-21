@@ -4,7 +4,7 @@ Simple docker-compose setup for a Don't Starve Together server running on LinuxG
 
 Build the app with `docker-compose up --build`.
 
-You can change the ENVs in the docker-compose. ENVs control the basic server config.
+You can change the ENVs in the docker-compose. ENVs control the basic server config. I only picked the configs I cared about. Feel free to fork and change them up.
 
 ```
 SERVER_PASSWORD       # Sets the server password (string)
