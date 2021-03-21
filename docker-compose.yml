@@ -17,6 +17,7 @@ services:
       - gsm-log-volume:/home/linuxgsm/gsm/log
       - steam-log-volume:/home/linuxgsm/.local/share/Steam/logs
       - dst-server-volume:/home/linuxgsm/.klei/DoNotStarveTogether
+      - mods-volume:/home/linuxgsm/gsm/serverfiles/mods
     # Customize these!
     environment:
       - SERVER_PASSWORD=test123
@@ -39,3 +40,4 @@ volumes:
   gsm-log-volume:
   steam-log-volume:
   dst-server-volume:
+  mods-volume:

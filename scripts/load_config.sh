@@ -66,8 +66,8 @@ cp /home/linuxgsm/gsm/dstserver.cfg /home/linuxgsm/gsm/lgsm/config-lgsm/dstserve
 if [ "$ENABLE_MODS" = "1" ]
 then
   echo "Enabling Mods...";
-  cp /home/linuxgsm/gsm/dedicated_server_mods_setup.lua /home/linuxgsm/serverfiles/mods/dedicated_server_mods_setup.lua
-  cp /home/linuxgsm/gsm/modsettings.lua /home/linuxgsm/serverfiles/mods/modsettings.lua
+  cp /home/linuxgsm/gsm/dedicated_server_mods_setup.lua /home/linuxgsm/gsm/serverfiles/mods/dedicated_server_mods_setup.lua
+  cp /home/linuxgsm/gsm/modsettings.lua /home/linuxgsm/gsm/serverfiles/mods/modsettings.lua
 fi
 
 # Run Updates

@@ -51,9 +51,13 @@ This ENV is optional. Not setting `ENABLE_MODS` will cause the server to assume 
 # This directory is setup as a volume to remain persistent
 /home/linuxgsm/.klei/DoNotStarveTogether/
 
-# GSM and game logs
+# Holds the GSM and game logs
 # This directory is setup as a volume to remain persistent
 /home/linuxgsm/gsm/log/
+
+# Holds the Don't Starve Together mod files
+# This directory is setup as a volume to remain persistent
+/home/linuxgsm/gsm/serverfiles/mods
 ```
 
 ## Hot Tips
